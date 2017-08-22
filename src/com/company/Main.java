@@ -26,57 +26,62 @@ public class Main {
             String answers;
             Scanner sc = new Scanner(System.in);
             System.out.println("Let's start");
+            System.out.println("");
             Points quiz = new Points();
 
-            System.out.println("Type true or false"); //directions for the quiz
-            System.out.print("1. You want to serve in the military when you grow up "); //question 1
+            System.out.println("Type true or false for true or false questions");//directions for the quiz
+            System.out.println("Type a, b, c, or d for multiple choice questions"); //directions for multiple choice
+            System.out.println("Type your answer for short answer questions"); //directions for multiple choice
+            System.out.println(""); //extra line for spacing
+
+            System.out.println("1. Where would you work when you grow up? \n A. Military \n B. FBI \n C. Restaurant \n D. Hospital"); //question 1
             answers = sc.next();
-            while (quiz.analyze(answers) == false) { //goes to analyze answer and adds points if necessary
+            while (quiz.analyzeMulChoice(answers) == false) { //goes to analyze answer and adds points if necessary
                 answers = sc.next();
             }
             System.out.print("2. You  are afraid of seeing people die "); //question 2
             answers = sc.next();
-            while (quiz.analyze(answers) == false) { //goes to analyze answer and adds points if necessary
+            while (quiz.analyzeTorF(answers) == false) { //goes to analyze answer and adds points if necessary
                 answers = sc.next();
             }
             System.out.print("3. You would fight instead of run during a fight "); //question 3
             answers = sc.next();
-            while (quiz.analyze(answers) == false) {//goes to analyze answer and adds points if necessary
+            while (quiz.analyzeTorF(answers) == false) {//goes to analyze answer and adds points if necessary
                 answers = sc.next();
             }
             System.out.print("4. You get sick often "); //question 4
             answers = sc.next();
-            while(quiz.analyze(answers)==false){//goes to analyze answer and adds points if necessary
+            while(quiz.analyzeTorF(answers)==false){//goes to analyze answer and adds points if necessary
                 answers=sc.next();
             }
             System.out.print("5. You get hungry a lot ");//question 5
             answers = sc.next();
-            while(quiz.analyze(answers)==false){//goes to analyze answer and adds points if necessary
+            while(quiz.analyzeTorF(answers)==false){//goes to analyze answer and adds points if necessary
                 answers=sc.next();
             }
             System.out.print("6. You have experienced a lot of death around you ");//question 6
             answers = sc.next();
-            while(quiz.analyze(answers)==false){//goes to analyze answer and adds points if necessary
+            while(quiz.analyzeTorF(answers)==false){//goes to analyze answer and adds points if necessary
                 answers=sc.next();
             }
             System.out.print("7. You tend to rage a lot ");//question 7
             answers = sc.next();
-            while(quiz.analyze(answers)==false){//goes to analyze answer and adds points if necessary
+            while(quiz.analyzeTorF(answers)==false){//goes to analyze answer and adds points if necessary
                 answers=sc.next();
             }
             System.out.print("8. You would not be hesitant to kill if you had to ");//question 8
             answers = sc.next();
-            while(quiz.analyze(answers)==false){//goes to analyze answer and adds points if necessary
+            while(quiz.analyzeTorF(answers)==false){//goes to analyze answer and adds points if necessary
                 answers=sc.next();
             }
             System.out.print("9. You have a good appetite ");//question 9
             answers = sc.next();
-            while(quiz.analyze(answers)==false){//goes to analyze answer and adds points if necessary
+            while(quiz.analyzeTorF(answers)==false){//goes to analyze answer and adds points if necessary
                 answers=sc.next();
             }
-            System.out.print("10. Overall you're not a really nice person ");//question 10
+            System.out.print("Write a sentence or two about yourself ");//question 10
             answers = sc.next();
-            while(quiz.analyze(answers)==false){//goes to analyze answer and adds points if necessary
+            while(quiz.analyzeShortAns(answers)==false){//goes to analyze answer and adds points if necessary
                 answers=sc.next();
             }
             int points = quiz.pointValue(); //gets the total amount of points and prints either of the results based on how many points total
